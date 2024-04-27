@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .mini-cart-parent{
     position: fixed;
     width: 100%;
@@ -90,4 +91,98 @@
             background-color: #dfe4ea;
         }
     }
+=======
+.mini-cart-parent{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: auto;
+    right: -100%;
+    z-index: 1030;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    opacity: 1;
+    transition: all 0.35s ease-in-out;
+    &.show{
+        opacity: 1;
+        left: auto;
+        right: 0;
+        .mini-cart{
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    .mini-cart{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left:auto;
+        right: 0;
+        width: 450px;
+        background-color: #fff;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        opacity: 0;
+        transition: 0.7s;
+        transform: translateX(450px);
+    }
+    .list-items {
+        max-height: 250px;
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+    .add-note-button{
+        position: relative;
+        &::after,
+        &::before{
+            position: absolute;
+            height: 2px;
+            width: 10px;
+            left: 0;
+            top: calc(50% - 1px );
+            background-color:var(--color-body);
+            z-index: 2;
+            content: '';
+        }
+        &.collapsed::before{
+            transform: rotate(90deg);
+        }
+    }
+}
+
+.quentity-counter{
+    max-width: 120px;
+    border: 1px solid #aaa !important;
+    border-color: .3s ease-in-out;
+    &:hover{
+        border-color: #111;
+    }
+    input{
+        display: inline-block;
+        box-shadow: none !important;
+        outline: 0;
+        border: none;
+        width: 30px;
+        text-align: center;
+    }
+    /* For Chrome, Safari, and Opera */
+    input[type=number]::-webkit-inner-spin-button, 
+    input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    input[type=number] {
+        -moz-appearance: textfield;
+    }
+    
+    button{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        &:hover{
+            background-color: #dfe4ea;
+        }
+    }
+>>>>>>> 1353c804286708e891b02f1a279f6eb97f3e7c9f
 }

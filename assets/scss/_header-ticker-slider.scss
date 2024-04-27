@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 header{
     font-size: 15px;
 }
@@ -37,4 +38,45 @@ header{
 }
 .menu-toggler {
 	width: 35px;
+=======
+header{
+    font-size: 15px;
+}
+.header-ticker-slider{
+    background-color: rgb(234, 202, 190);
+}
+#header-ticker-slider {
+    font-size: 15px;
+}
+#header-ticker-slider button {
+    font-size: 15px;
+    position: absolute;
+    top: calc(50% - 10px);
+    opacity: 0.7;
+}
+
+#header-ticker-slider button.owl-next{
+    right: 0;
+}
+.get-courtry-list{
+    cursor: pointer;
+    &::after{
+        transform: translateY(10px);
+    }
+}
+.flag-icon,
+.header-top-menu .flag-icon {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    border-radius: 50%;
+    flex-shrink: 0;
+    background-size: cover;
+}
+.mobile-menu{
+    display: none;
+}
+.menu-toggler {
+	width: 35px;
+>>>>>>> 1353c804286708e891b02f1a279f6eb97f3e7c9f
 }

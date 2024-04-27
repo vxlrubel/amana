@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :root{
     --color-body: #111;
     --color-hotpink: #EACABE;
@@ -33,4 +34,76 @@ h1, h2, h3, h4, h5, h6{
 }
 .bg-hotpink{
     background-color: var(--color-hotpink);
+=======
+:root{
+    --color-body: #111;
+    --color-hotpink: #EACABE;
+}
+
+body{
+    font-family: 'Twentieth Century', sans-serif;
+    color: var(--color-body);
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Plantin', serif;
+}
+@media(min-width: 1366px){
+    .container{
+        max-width: 1320px;
+    }
+}
+@media(min-width: 1460px){
+    .container{
+        max-width: 1400px;
+    }
+}
+.text-dark{
+    color: var(--color-body) !important;
+}
+.text-underline{
+    text-decoration: underline !important;
+}
+.border-bottom-2{
+    border-bottom: 2px solid var(--color-body);
+}
+.border-top-2{
+    border-top: 2px solid var(--color-body);
+}
+.border-color{
+    border-color: var(--color-body) !important;
+}
+.bg-hotpink{
+    background-color: var(--color-hotpink);
+}
+span,
+.font-twentieth-century{
+    font-family: 'Twentieth Century', sans-serif;
+}
+.font-plantin{
+    font-family: 'Plantin', sans-serif !important;
+}
+.letter-spacing{
+    letter-spacing: .05em;
+}
+.text-footer{
+    color: #000000b2 !important;
+}
+.bd-transparent{
+    background-color: transparent !important;;
+}
+.form-control::placeholder {
+	color: var(--color-body);
+}
+
+.btn.btn-theme{
+    background-color: #5a31f4 !important;
+    color: white !important;
+    &:hover{
+        background-color: #7f68e9 !important;
+    }
+}
+
+.text-theme{
+    color: #5a31f4 !important;
+>>>>>>> 1353c804286708e891b02f1a279f6eb97f3e7c9f
 }
