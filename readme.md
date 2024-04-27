@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # README #
 
 This README would normally document whatever steps are necessary to get your application up and running.
@@ -28,6 +27,3 @@ This README would normally document whatever steps are necessary to get your app
 
 * Repo owner or admin
 * Other community or team contact
-=======
-[View site](https://vxlrubel.github.io/amana/)
->>>>>>> 1353c804286708e891b02f1a279f6eb97f3e7c9f

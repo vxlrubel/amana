@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 @font-face {
     font-family: 'Twentieth Century';
     src: url('TwCenMT-Medium.woff2') format('woff2'),
@@ -17,23 +16,3 @@
     font-display: swap;
 }
 
-=======
-@font-face {
-    font-family: 'Twentieth Century';
-    src: url('TwCenMT-Medium.woff2') format('woff2'),
-        url('TwCenMT-Medium.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Plantin';
-    src: url('plantin_n3.woff2') format('woff2'),
-        url('plantin_n3.woff') format('woff');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
-
->>>>>>> 1353c804286708e891b02f1a279f6eb97f3e7c9f
