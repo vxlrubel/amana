@@ -2,6 +2,7 @@
     --color-body: #111;
     --color-hotpink: #EACABE;
 }
+
 body{
     font-family: 'Twentieth Century', sans-serif;
     color: var(--color-body);
@@ -31,6 +32,40 @@ h1, h2, h3, h4, h5, h6{
 .border-top-2{
     border-top: 2px solid var(--color-body);
 }
+.border-color{
+    border-color: var(--color-body) !important;
+}
 .bg-hotpink{
     background-color: var(--color-hotpink);
+}
+span,
+.font-twentieth-century{
+    font-family: 'Twentieth Century', sans-serif;
+}
+.font-plantin{
+    font-family: 'Plantin', sans-serif !important;
+}
+.letter-spacing{
+    letter-spacing: .05em;
+}
+.text-footer{
+    color: #000000b2 !important;
+}
+.bd-transparent{
+    background-color: transparent !important;;
+}
+.form-control::placeholder {
+	color: var(--color-body);
+}
+
+.btn.btn-theme{
+    background-color: #5a31f4 !important;
+    color: white !important;
+    &:hover{
+        background-color: #7f68e9 !important;
+    }
+}
+
+.text-theme{
+    color: #5a31f4 !important;
 }
