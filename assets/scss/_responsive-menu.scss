@@ -1,0 +1,35 @@
+.mobile-menu{
+    .primary-menu-items{
+        a{
+            padding: 7px 0 !important;
+        }
+    }
+    .responsive-submenu{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 100%;
+        z-index: 1031;
+        opacity: 0.5;
+        transition: all 0.3s ease-in-out;
+        &.show{
+            opacity: 1;
+            left: 0;
+        }
+        .responsive-submenu{
+            z-index: 1032;
+            .responsive-submenu{
+                z-index: 1033;
+            }
+        }
+        .responsive-slide-close{
+            cursor: pointer;
+        }
+    }
+    a{
+        letter-spacing: .05em;
+    }
+    li{
+        border-color: #00000080 !important;
+    }
+}

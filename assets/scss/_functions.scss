@@ -1,0 +1,12 @@
+@for $i from 11 through 40 {
+    .fz-#{$i} {
+        font-size: #{$i}px;
+    }
+}
+
+@for $i from 1 through 10 {
+    $opacity: 0.1 * $i;
+    .opacity-#{$i} {
+        opacity: #{$opacity};
+    }
+}
