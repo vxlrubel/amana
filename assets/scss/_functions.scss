@@ -1,4 +1,4 @@
-@for $i from 11 through 40 {
+@for $i from 11 through 60 {
     .fz-#{$i} {
         font-size: #{$i}px;
     }

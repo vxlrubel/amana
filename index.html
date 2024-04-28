@@ -10,20 +10,20 @@
     integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
     crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flag-icon-css@4.1.7/css/flag-icons.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="./assets/css/fonts/font.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/nice-select.css">
     <link rel="stylesheet" href="./assets/css/main.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js" integrity="sha512-q583ppKrCRc7N5O0n2nzUiJ+suUv7Et1JGels4bXOaMFQcamPk9HjdUknZuuFjBNs7tsMuadge5k9RzdmO+1GQ==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
+    <script src="./assets/js/jquery.js"></script>
+    <script src="./assets/js/lazysizes.js" async=""></script>
     
 </head>
 <body>
 
     <!-- header area -->
-    <header class="clearfix">
+    <header class="clearfix position-relative main-header">
 
         <!-- header ticker slider -->
         <div class="header-ticker-slider">
@@ -87,7 +87,12 @@
             <div class="container position-relative">
                 <div class="menu-flex border-bottom">
                     <div class="logo">
-                        <h2 class="m-0 m-0"><a href="index.html"><img src="./assets/img/logo.avif" alt="brand logo image"></a></h2>
+                        <h2 class="m-0 m-0">
+                            <a href="index.html">
+                                <img data-src="./assets/img/logo-black.webp" alt="brand logo image" class="logo-dark img-fluid lazyload" width="449" height="144">
+                                <img data-src="./assets/img/logo-white.webp" alt="brand logo image" class="logo-light img-fluid lazyload" width="449" height="144">
+                            </a>
+                        </h2>
                     </div>
                     <div class="nav-menu d-none d-lg-block">
                         <ul class="main-menu d-flex list-unstyled m-0 px-3">
@@ -124,7 +129,7 @@
                                         </ul>
                                     </li>
                                     <li class="position-relative m-0">
-                                        <img src="./assets/img/tamara-schipchinskaya.avif" alt="image" class="w-100">
+                                        <img data-src="./assets/img/tamara-schipchinskaya.webp" alt="image" class="lazyload w-100 img-fluid" width="320" height="234">
                                         <div class="mega-image-box-content p-4">
                                             <div class="text-left">
                                                 <h3 class="text-white mb-4 fz-24">Everyday Elegance</h3>
@@ -141,18 +146,18 @@
                         </ul>
                     </div>
                     <div class="menu-last-icon d-flex justify-content-end" role="navigation">
-                        <button class="btn" id="search-toggle-button" type="button">
+                        <button class="btn" id="search-toggle-button">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </button>
                         <a href="login.html" class="btn d-none d-lg-inline-block" role="navigation">
                             <i class="fa-regular fa-user"></i>
                         </a>
-                        <button class="btn position-relative" id="minicart-toggler" type="button">
+                        <button class="btn position-relative" id="minicart-toggler">
                             <i class="fa-solid fa-bag-shopping"></i>
                             <span class="mini-cart-items-count">5</span>
                         </button>
 
-                        <button class="btn menu-toggler d-lg-none pr-0" type="button">
+                        <button class="btn menu-toggler d-lg-none pr-0">
                             <i class="fa-solid fa-bars-staggered"></i>
                         </button>
                     </div>
@@ -235,14 +240,14 @@
                     <div class="mini-cart px-4 py-3 border shadow">
                         <div class="d-flex justify-content-between align-items-center mb-3 border-bottom-2 pb-2">
                             <h2 class="m-0 fz-21">Your cart<sup>2</sup></h2>
-                            <button class="btn pr-0 shadow-none" id="close-minicart" type="button"><i class="fa-solid fa-xmark"></i></button>
+                            <button class="btn pr-0 shadow-none" id="close-minicart"><i class="fa-solid fa-xmark"></i></button>
                         </div>
 
                         <!-- cart item -->
                         <ul class="list-unstyled m-0 p-0 list-items">
                             <li class="row">
                                 <div class="col-4">
-                                    <a href="./product-details.html"><img src="./assets/img/cart-item1.webp" alt="cart item image" class="img-fluid"></a>
+                                    <a href="./product-details.html"><img data-src="./assets/img/cart-item1.webp" alt="cart item image" class="lazyload img-fluid"  width="100" height="300"></a>
                                 </div>
                                 <div class="col-8">
                                     <h4><a href="./product-details.html" class="text-decoration-none text-dark text-uppercase fz-16">amor ballet flats </a></h4>
@@ -252,9 +257,9 @@
 
                                     <div class="d-flex justify-content-between align-items-center">
                                         <div class="quentity-counter d-flex align-items-center">
-                                            <button class="btn shadow-none decrement" type="button"><i class="fa-solid fa-minus"></i></button>
+                                            <button class="btn shadow-none decrement"><i class="fa-solid fa-minus"></i></button>
                                             <input type="number" value="1" step="1" min="1" max="50" class="p-0">
-                                            <button class="btn shadow-none increment" type="button"><i class="fa-solid fa-plus"></i></button>
+                                            <button class="btn shadow-none increment"><i class="fa-solid fa-plus"></i></button>
                                         </div>
                                         <button class="btn shadow-none text-underline">Remove</button>
                                     </div>
@@ -264,7 +269,7 @@
                             </li>
                             <li class="row">
                                 <div class="col-4">
-                                    <a href="./product-details.html"><img src="./assets/img/cart-item1.webp" alt="cart item image" class="img-fluid"></a>
+                                    <a href="./product-details.html"><img data-src="./assets/img/cart-item1.webp" alt="cart item image" class="img-fluid lazyload"></a>
                                 </div>
                                 <div class="col-8">
                                     <h4><a href="./product-details.html" class="text-decoration-none text-dark text-uppercase fz-16">amor ballet flats </a></h4>
@@ -274,9 +279,9 @@
 
                                     <div class="d-flex justify-content-between align-items-center">
                                         <div class="quentity-counter d-flex align-items-center">
-                                            <button class="btn shadow-none decrement" type="button"><i class="fa-solid fa-minus"></i></button>
+                                            <button class="btn shadow-none decrement"><i class="fa-solid fa-minus"></i></button>
                                             <input type="number" value="1" step="1" min="1" max="50" class="p-0">
-                                            <button class="btn shadow-none increment" type="button"><i class="fa-solid fa-plus"></i></button>
+                                            <button class="btn shadow-none increment"><i class="fa-solid fa-plus"></i></button>
                                         </div>
                                         <button class="btn shadow-none text-underline">Remove</button>
                                     </div>
@@ -286,7 +291,7 @@
                             </li>
                             <li class="row">
                                 <div class="col-4">
-                                    <a href="./product-details.html"><img src="./assets/img/cart-item1.webp" alt="cart item image" class="img-fluid"></a>
+                                    <a href="./product-details.html"><img data-src="./assets/img/cart-item1.webp" alt="cart item image" class="img-fluid lazyload"></a>
                                 </div>
                                 <div class="col-8">
                                     <h4><a href="./product-details.html" class="text-decoration-none text-dark text-uppercase fz-16">amor ballet flats </a></h4>
@@ -296,9 +301,9 @@
 
                                     <div class="d-flex justify-content-between align-items-center">
                                         <div class="quentity-counter d-flex align-items-center">
-                                            <button class="btn shadow-none decrement" type="button"><i class="fa-solid fa-minus"></i></button>
+                                            <button class="btn shadow-none decrement"><i class="fa-solid fa-minus"></i></button>
                                             <input type="number" value="1" step="1" min="1" max="50" class="p-0">
-                                            <button class="btn shadow-none increment" type="button"><i class="fa-solid fa-plus"></i></button>
+                                            <button class="btn shadow-none increment"><i class="fa-solid fa-plus"></i></button>
                                         </div>
                                         <button class="btn shadow-none text-underline">Remove</button>
                                     </div>
@@ -451,16 +456,35 @@
     <!-- header area end -->
 
 
+    <section class="clearfix hero-section">
+        <video autoplay data-src="https://cdn.shopify.com/videos/c/o/v/8b230dfb78624f2baf062868893a4107.mp4" class="lazyload w-100" preload="auto" id="hero-video"></video>
+        <div class="bg-black-alpha">
+            <div class="container h-100">
+                <div class="row align-items-center h-100">
+                    <div class="col-md-8 col-lg-6 offset-md-2 offset-lg-3">
+                        <p class="text-center text-white text-uppercase">available now</p>
+                        <h2 class="text-center text-white fz-56 text-uppercase" >Shop stylish occasionwear now</h2>
+                        <p class="text-center mt-5 text-uppercase">
+                            <a href="javascript:void(0)" class="text-dark bg-white border text-decoration-none py-3 px-4">Shop now</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
     <section class="clearfix home-product-category py-5">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-8 offset-lg-2">
+                <div class="col-lg-8 offset-lg-2 fade-effect"  fade-direction="bottom"  fade-time=".3">
                     <h2 class="text-center pb-5 border-bottom mb-5 border-color fz-37">From head-turning occasionwear, to every day dresses and outerwear, there’s many a timeless staple to choose from. </h2>
                 </div>
             </div>
             
             <div class="row">
-                <div class="col-lg-4 mb-4 mb-lg-0">
+                <div class="col-lg-4 mb-4 mb-lg-0 fade-effect" fade-direction="left"  fade-time=".5" >
                     <div class="position-relative overflow-hidden">
                         <img data-src="./assets/img/products/product-1.webp" width="312" height="512" class="lazyload w-100" alt="image">
                         <div class="content-box py-5 px-4 d-flex align-items-end">
@@ -472,7 +496,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 mb-4 mb-lg-0">
+                <div class="col-lg-4 mb-4 mb-lg-0 fade-effect" fade-direction="bottom"  fade-time=".5">
                     <div class="position-relative overflow-hidden">
                         <img data-src="./assets/img/products/product-2.webp" width="312" height="512" class="lazyload w-100" alt="image">
                         <div class="content-box py-5 px-4 d-flex align-items-end">
@@ -484,7 +508,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-4 fade-effect" fade-direction="right"  fade-time=".5">
                     <div class="position-relative overflow-hidden">
                         <img data-src="./assets/img/products/product-3.webp" width="312" height="512" class="lazyload w-100" alt="image">
                         <div class="content-box py-5 px-4 d-flex align-items-end">
@@ -500,6 +524,155 @@
         </div>
     </section>
     
+
+    <!-- new arrival product -->
+
+    <section class="clearfix new-arrival-product-parent py-5">
+        <div class="container">
+            <div class="row align-items-center mb-5">
+                <div class="col-sm-6">
+                    <h2 class="text-uppercase fz-32 fade-effect" fade-direction="left"  fade-time=".5">NEW ARRIVALS</h2>
+                    <p class="m-0 fade-effect" fade-direction="right"  fade-time=".5"><a href="javascript:void(0)" class="text-dark fz-19">Shop the collections</a></p>
+                </div>
+                <div class="col-sm-6">
+                    <div class="text-right fade-effect" fade-direction="right"  fade-time=".5">
+                        <button type="button" class="btn shadow-none slide-left-icon"><i class="fa-solid fa-arrow-left-long"></i></button>
+                        <button type="button" class="btn shadow-none slide-right-icon"><i class="fa-solid fa-arrow-right-long"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="new-arribal-product owl-carousel fade-effect" fade-direction="bottom"  fade-time=".5">
+
+                        <div class="arrival-item p-3">
+                            <div class="img-box position-relative overflow-hidden">
+                                <span class="label text-dark bg-white border py-1 px-2 fz-19 rounded">New</span>
+                                <img data-src="./assets/img/products/product-1.webp" width="312" height="512" class="lazyload w-100"  alt="product image">
+                                <button type="button" class="btn bg-white border text-uppercase fz-14 quick-view shadow-none" data-toggle="modal" data-target="#quickviewarrival">quick view</button>
+                            </div>
+                            <div class="arrival-content text-center py-3">
+                                <p class="m-0"><a href="javascript:void(0)" class="text-dark text-uppercase text-decoration-none">Esra coord in grey</a></p>
+                                <p class="m-0"><a href="javascript:void(0)" class="text-dark text-capitalize text-decoration-none">Fash Focused</a></p>
+                                <p class="m-0"><span class="text-dark text-capitalize text-decoration-none fz-19">Tk 4,000.00</span></p>
+                            </div>
+                        </div>
+                        <div class="arrival-item p-3">
+                            <div class="img-box position-relative overflow-hidden">
+                                <span class="label text-dark bg-white border py-1 px-2 fz-19 rounded">New</span>
+                                <img data-src="./assets/img/products/product-2.webp" width="312" height="512" class="lazyload w-100"  alt="product image">
+                                <button type="button" class="btn bg-white border text-uppercase fz-14 quick-view shadow-none" data-toggle="modal" data-target="#quickviewarrival">quick view</button>
+                            </div>
+                            <div class="arrival-content text-center py-3">
+                                <p class="m-0"><a href="javascript:void(0)" class="text-dark text-uppercase text-decoration-none">Esra coord in grey</a></p>
+                                <p class="m-0"><a href="javascript:void(0)" class="text-dark text-capitalize text-decoration-none">Fash Focused</a></p>
+                                <p class="m-0"><span class="text-dark text-capitalize text-decoration-none fz-19">Tk 4,000.00</span></p>
+                            </div>
+                        </div>
+                        <div class="arrival-item p-3">
+                            <div class="img-box position-relative overflow-hidden">
+                                <span class="label text-dark bg-white border py-1 px-2 fz-19 rounded">New</span>
+                                <img data-src="./assets/img/products/product-3.webp" width="312" height="512" class="lazyload w-100"  alt="product image">
+                                <button type="button" class="btn bg-white border text-uppercase fz-14 quick-view shadow-none" data-toggle="modal" data-target="#quickviewarrival">quick view</button>
+                            </div>
+                            <div class="arrival-content text-center py-3">
+                                <p class="m-0"><a href="javascript:void(0)" class="text-dark text-uppercase text-decoration-none">Esra coord in grey</a></p>
+                                <p class="m-0"><a href="javascript:void(0)" class="text-dark text-capitalize text-decoration-none">Fash Focused</a></p>
+                                <p class="m-0"><span class="text-dark text-capitalize text-decoration-none fz-19">Tk 4,000.00</span></p>
+                            </div>
+                        </div>
+                        <div class="arrival-item p-3">
+                            <div class="img-box position-relative overflow-hidden">
+                                <span class="label text-dark bg-white border py-1 px-2 fz-19 rounded">New</span>
+                                <img data-src="./assets/img/products/product-1.webp" width="312" height="512" class="lazyload w-100"  alt="product image">
+                                <button type="button" class="btn bg-white border text-uppercase fz-14 quick-view shadow-none" data-toggle="modal" data-target="#quickviewarrival">quick view</button>
+                            </div>
+                            <div class="arrival-content text-center py-3">
+                                <p class="m-0"><a href="javascript:void(0)" class="text-dark text-uppercase text-decoration-none">Esra coord in grey</a></p>
+                                <p class="m-0"><a href="javascript:void(0)" class="text-dark text-capitalize text-decoration-none">Fash Focused</a></p>
+                                <p class="m-0"><span class="text-dark text-capitalize text-decoration-none fz-19">Tk 4,000.00</span></p>
+                            </div>
+                        </div>
+                        <div class="arrival-item p-3">
+                            <div class="img-box position-relative overflow-hidden">
+                                <span class="label text-dark bg-white border py-1 px-2 fz-19 rounded">New</span>
+                                <img data-src="./assets/img/products/product-2.webp" width="312" height="512" class="lazyload w-100"  alt="product image">
+                                <button type="button" class="btn bg-white border text-uppercase fz-14 quick-view shadow-none" data-toggle="modal" data-target="#quickviewarrival">quick view</button>
+                            </div>
+                            <div class="arrival-content text-center py-3">
+                                <p class="m-0"><a href="javascript:void(0)" class="text-dark text-uppercase text-decoration-none">Esra coord in grey</a></p>
+                                <p class="m-0"><a href="javascript:void(0)" class="text-dark text-capitalize text-decoration-none">Fash Focused</a></p>
+                                <p class="m-0"><span class="text-dark text-capitalize text-decoration-none fz-19">Tk 4,000.00</span></p>
+                            </div>
+                        </div>
+                        <div class="arrival-item p-3">
+                            <div class="img-box position-relative overflow-hidden">
+                                <span class="label text-dark bg-white border py-1 px-2 fz-19 rounded">New</span>
+                                <img data-src="./assets/img/products/product-3.webp" width="312" height="512" class="lazyload w-100"  alt="product image">
+                                <button type="button" class="btn bg-white border text-uppercase fz-14 quick-view shadow-none" data-toggle="modal" data-target="#quickviewarrival">quick view</button>
+                            </div>
+                            <div class="arrival-content text-center py-3">
+                                <p class="m-0"><a href="javascript:void(0)" class="text-dark text-uppercase text-decoration-none">Esra coord in grey</a></p>
+                                <p class="m-0"><a href="javascript:void(0)" class="text-dark text-capitalize text-decoration-none">Fash Focused</a></p>
+                                <p class="m-0"><span class="text-dark text-capitalize text-decoration-none fz-19">Tk 4,000.00</span></p>
+                            </div>
+                        </div>
+                        <div class="arrival-item p-3 h-100">
+                            <div class="collection">
+                                <h3 class="fz-24">Collection</h3>
+                                <p><a href="javascript:void(0)" class="fz-19 text-dark">View All</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- quick view modal -->
+        <div class="modal fade" id="quickviewarrival" data-backdrop="static" data-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable modal-lg">
+                <div class="modal-content position-relative">
+                    <button type="button" class="close arrival-close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <img data-src="./assets/img/products/product-1.webp" class="lazyload img-fluid" alt="image">
+                            </div>
+                            <div class="col-md-7">
+                                <p><span class="bg-white border px-2 py-1 text-uppercase">new</span></p>
+                                <h2 class="fz-32">Maha dress in cream</h2>
+                                <p>Fash Focused <span class="opacity-5">SKU: FF699-D-CRM</span></p>
+                                <p class="fz-19">Tk 5,400.00</p>
+                                <p><a href="javascritp:void(0)" class="text-dark fz-19">View product details <i
+                                            class="fa-solid fa-arrow-right-long fz-14 opacity-5"></i></a></p>
+                                <p>Quantity</p>
+                                <div class="quentity-counter d-flex align-items-center arrival-counter mb-3">
+                                    <button class="btn shadow-none decrement"><i class="fa-solid fa-minus"></i></button>
+                                    <input type="number" value="1" step="1" min="1" max="50" class="p-0">
+                                    <button class="btn shadow-none increment"><i class="fa-solid fa-plus"></i></button>
+                                </div>
+        
+                                <p class="fz-19 mb-2">Beautiful long dress with v neck and ruched detail</p>
+                                <p class="fz-19 mb-2">Free size UK 8-16 model is 5ft3 size 10 for reference</p>
+                                <p class="fz-19 mb-3">100% viscose</p>
+                                <p><a href="javascript:void(0)" class="btn btn-secondary d-block text-uppercase py-2">Add to
+                                        bag</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- quick view modal end -->
+
+    </section>
+
+    
+    <!-- new arrival product end -->
     <!-- discount area -->
     <div class="clearfix bg-hotpink py-5">
         <div class="container">
@@ -508,24 +681,24 @@
                     <div class="col-md-6">
                         <div class="row">
                             <div class="col-lg-7 offset-lg-5 mb-4 mb-md-0 responsive-border-right pl-md-5 pl-lg-0">
-                                <h3 class="fz-21 m-0">upto</h3>
-                                <div class="d-flex align-items-center discount-percentage">
+                                <h3 class="fz-21 m-0 fade-effect" fade-direction="left"  fade-time=".5">upto</h3>
+                                <div class="d-flex align-items-center discount-percentage fade-effect" fade-direction="bottom"  fade-time="1">
                                     <h2 class="m-0 fz-40">50</h2>
                                     <div class="pl-2">
                                         <h3 class="percent m-0">%</h3>
                                         <h3 class="off m-0">off</h3>
                                     </div>
                                 </div>
-                                <p class="m-0 fz-17">*T&Cs apply</p>
+                                <p class="m-0 fz-17 fade-effect" fade-direction="right"  fade-time=".5">*T&Cs apply</p>
                             </div>
                         </div>
                         
                     </div>
                     <div class="col-md-6">
                         <div class="pl-md-5">
-                            <h2 class="fz-24 text-uppercase">OUTLET</h2>
-                            <p class="mb-4">Discover incredible deals and discounts on our distinctive pieces in our online outlet</p>
-                            <a href="javascript:void(0)" class="text-dark bg-white px-3 py-2 text-uppercase text-decoration-none">shop now</a>
+                            <h2 class="fz-24 text-uppercase fade-effect" fade-direction="bottom"  fade-time=".3">OUTLET</h2>
+                            <p class="mb-4 fade-effect" fade-direction="bottom"  fade-time=".5">Discover incredible deals and discounts on our distinctive pieces in our online outlet</p>
+                            <a href="javascript:void(0)" class="text-dark bg-white px-3 py-2 text-uppercase text-decoration-none fade-effect" fade-direction="bottom"  fade-time=".7">shop now</a>
                         </div>
                     </div>
                 </div>
@@ -539,10 +712,10 @@
     <div class="clearfix py-5">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-6 fade-effect" fade-direction="left"  fade-time=".5">
                     <img src="./assets/img/GoldenExcitingGiftVoucherGiftCertificate.webp" alt="image" class="img-fluid">
                 </div>
-                <div class="col-lg-6">
+                <div class="col-lg-6 fade-effect" fade-direction="right"  fade-time=".5">
                     <form action="javascript:void(0)"  id="denominations">
                         <p class="fz-19">Denominations: <span class="set-price">&euro; 20.00</span></p>
                         <select name="" id="" class="w-100 mb-3">
@@ -572,28 +745,28 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-6 col-lg-3 mb-5 mb-lg-0">
-                    <div class="text-center">
+                    <div class="text-center fade-effect" fade-direction="left"  fade-time=".5">
                         <i class="fa-solid fa-globe fz-19"></i>
                         <p class="text-uppercase fz-15 my-3">we offer</p>
                         <h3 class="fz-24 m-0">Worldwide Shipping </h3>
                     </div>
                 </div>
                 <div class="col-sm-6 col-lg-3 mb-5 mb-lg-0">
-                    <div class="text-center">
+                    <div class="text-center fade-effect" fade-direction="top"  fade-time=".5">
                         <i class="fa-solid fa-shirt fz-19"></i>
                         <p class="text-uppercase fz-15 my-3">Up-to date with</p>
                         <h3 class="fz-24 m-0">Latest Fashion & Trends</h3>
                     </div>
                 </div>
                 <div class="col-sm-6 col-lg-3 mb-5 mb-lg-0">
-                    <div class="text-center">
+                    <div class="text-center fade-effect" fade-direction="bottom"  fade-time=".5">
                         <i class="fa-solid fa-money-check-dollar fz-19"></i>
                         <p class="text-uppercase fz-15 my-3">Pay in installments</p>
                         <h3 class="fz-24 m-0">Buy Now Pay Later</h3>
                     </div>
                 </div>
                 <div class="col-sm-6 col-lg-3 mb-5 mb-lg-0">
-                    <div class="text-center">
+                    <div class="text-center fade-effect" fade-direction="right"  fade-time=".5">
                         <i class="fa-brands fa-dropbox fz-19"></i>
                         <p class="text-uppercase fz-15 my-3">On all orders</p>
                         <h3 class="fz-24 m-0">Free UK Delivery</h3>
@@ -643,9 +816,9 @@
                     </form>
 
                     <ul class="list-unstyled p-0 mt-5 d-flex justify-content-center justify-content-md-start">
-                        <li class="mr-3"><a href="javascript:void(0)" class="text-dark"><i class="fa-brands fa-facebook"></i> <span class="d-none">facebook</span> </a></li>
-                        <li class="mr-3"><a href="javascript:void(0)" class="text-dark"><i class="fa-brands fa-x-twitter"></i> <span class="d-none">twitter</span> </a></li>
-                        <li class="mr-3"><a href="javascript:void(0)" class="text-dark"><i class="fa-brands fa-instagram"></i> <span class="d-none">instagram</span> </a></li>
+                        <li class="mr-3"><a href="javascript:void(0)" class="text-dark"><i class="fa-brands fa-facebook"></i></a></li>
+                        <li class="mr-3"><a href="javascript:void(0)" class="text-dark"><i class="fa-brands fa-x-twitter"></i></a></li>
+                        <li class="mr-3"><a href="javascript:void(0)" class="text-dark"><i class="fa-brands fa-instagram"></i></a></li>
                     </ul>
 
                     <!-- Button trigger modal -->
@@ -741,12 +914,12 @@
             </div>
         </div>
     </footer>
-    
-    <script src="https://cdn.jsdelivr.net/npm/flag-icon-css@4.1.7/svgo.config.min.js" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer" defer></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js" integrity="sha512-NqYds8su6jivy1/WLoW8x1tZMRD7/1ZfhWG/jcRQLOzV1k1rIODCpMgoBnar5QXshKJGV7vi0LXLNXPoFsM5Zg==" crossorigin="anonymous" referrerpolicy="no-referrer" defer ></script>
-    <script src="./assets/js/custom.js" async></script>
+    <script src="https://cdn.jsdelivr.net/npm/flag-icon-css@4.1.7/svgo.config.min.js"></script>
+    <script src="./assets/js/fadescroll.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <script src="./assets/js/jquery.nice-select.min.js"></script>
+    <script src="./assets/js/custom.js"></script>
+   
 </body>
 </html>

@@ -11,6 +11,8 @@
             this.responsiveMobileMenu();
             this.responsiveSlideSubmenu();
             this.modifySelectTag();
+            this.newArrivalSlider();
+            this.playVideo();
             
         }
 
@@ -149,6 +151,45 @@
                 const text  = _this.text();
                 _this.closest('#denominations').find('.set-price').empty().text(text);
             })
+        }
+
+        newArrivalSlider() {
+
+            var newArrivalSlider = $('.new-arribal-product');
+
+            newArrivalSlider.owlCarousel({
+                items: 2,
+                loop: false,
+                center: false,
+                dots: false,
+                lazyLoad: true,
+                responsive: {
+                    0: {
+                        items: 2
+                    },
+                    768: {
+                        items: 3
+                    },
+                    992: {
+                        items: 4
+                    }
+                }
+            });
+
+            $('.new-arrival-product-parent').on('click', '.slide-left-icon', function (e) {
+                e.preventDefault();
+                newArrivalSlider.trigger('prev.owl.carousel', [500]);
+            })
+            $('.new-arrival-product-parent').on('click', '.slide-right-icon', function (e) {
+                e.preventDefault();
+                newArrivalSlider.trigger('next.owl.carousel', [500]);
+            })
+        }
+
+        playVideo() {
+            const video = $('#hero-video');
+
+            console.log(video);
         }
         
     }
